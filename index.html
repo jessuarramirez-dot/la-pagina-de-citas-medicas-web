@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Citas Médicas</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <!-- Iconos de Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <!-- Para fondo personalizado, agrega en cada HTML: -->
+ <!-- <body style="background-image: url('{{ url_for('static', filename='img/tu_fondo.jpg') }}'); background-size: cover; background-position: center;"> -->
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="hero-bg">
+  <div class="container hero-container">
+    <img src="{{ url_for('static', filename='img/imagen12.png') }}" alt="Logo" class="logo-main">
+    <h1 class="hero-title">Sistema de Citas Médicas</h1>
+    <p class="hero-desc">Realiza desde cualquier lugar y de manera fácil tus requerimientos a través del portal del usuario</p>
+    <div class="botones">
+      <a href="/registro">
+        <button><i class="fa-solid fa-user-plus"></i> Registrar Paciente</button>
+      </a>
+      <a href="/reservar">
+        <button><i class="fa-solid fa-calendar-plus"></i> Reservar Cita</button>
+      </a>
+      <a href="/consultar_cita">
+        <button><i class="fa-solid fa-magnifying-glass"></i> Consultar Cita Reservada</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Secciones eliminadas para que solo aparezcan al presionar los botones del navbar -->
+
+</body>
+<!--
+Para agregar una imagen de fondo diferente en cada HTML, cambia la etiqueta <body> así:
+<body style="background-image: url('{{ url_for('static', filename='img/tu_fondo.jpg') }}'); background-size: cover; background-position: center;">
+Reemplaza 'tu_fondo.jpg' por el nombre de tu imagen en la carpeta static/img.
+-->
+</html>

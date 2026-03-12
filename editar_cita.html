@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Cita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Editar Cita</h2>
+    <form action="/actualizar_cita" method="POST">
+        <input type="hidden" name="id" value="{{ cita.id }}">
+        <label>Fecha:</label>
+        <input type="date" name="fecha" value="{{ cita.fecha }}" required>
+        <label>Hora:</label>
+        <input type="time" name="hora" value="{{ cita.hora }}" required>
+        <label>Tipo de cita:</label>
+        <input type="text" name="tipo_cita" value="{{ cita.tipo_cita }}" required>
+        <label>Médico asignado:</label>
+        <input type="text" name="medico" value="{{ cita.medico }}" required>
+        <button type="submit"><i class="fa-solid fa-floppy-disk"></i> Guardar Cambios</button>
+    </form>
+    <a href="/">
+        <button class="volver"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+    </a>
+</div>
+</body>
+</html>

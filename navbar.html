@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="/">
+      <img src="{{ url_for('static', filename='img/imagen12.png') }}" alt="Logo" class="logo-navbar">
+    </a>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="/" class="{% if request.path == '/' %}active{% endif %}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+    <li><a href="/nosotros" class="{% if request.path == '/nosotros' %}active{% endif %}"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+    <li><a href="/servicios" class="{% if request.path == '/servicios' %}active{% endif %}"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+    <li><a href="/programas" class="{% if request.path == '/programas' %}active{% endif %}"><i class="fa-solid fa-heart-pulse"></i> Programas</a></li>
+    <li><a href="/sedes" class="{% if request.path == '/sedes' %}active{% endif %}"><i class="fa-solid fa-location-dot"></i> Sedes</a></li>
+  </ul>
+</nav>

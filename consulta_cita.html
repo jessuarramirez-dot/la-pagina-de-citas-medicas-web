@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Consultar Paciente</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Consultar Cita</h2>
+
+<form action="/buscar_cita" method="POST">
+
+<label>Ingrese el documento del paciente</label>
+<input type="text" name="documento" required>
+
+<button type="submit">Consultar</button>
+
+</form>
+
+<a href="/">
+<button class="volver">Volver</button>
+</a>
+
+</div>
+
+</body>
+</html>

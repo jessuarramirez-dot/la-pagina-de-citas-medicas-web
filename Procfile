@@ -1,0 +1,1 @@
+web: gunicorn eps_citas_app.app:app

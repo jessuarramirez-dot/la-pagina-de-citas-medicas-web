@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Reservar Cita</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Reservar Cita</h2>
+
+<form action="/guardar_cita" method="POST">
+
+<label>Documento del Paciente</label>
+<input type="text" name="documento" required>
+
+<label>Médico</label>
+<input type="text" name="medico" required>
+
+<label>Tipo de Cita</label>
+<input type="text" name="tipo_cita" required>
+
+<label>Fecha</label>
+<input type="date" name="fecha" required>
+
+<label>Hora</label>
+<input type="time" name="hora" required>
+
+<label>Dirección EPS</label>
+<input type="text" name="direccion_eps" required>
+
+<button type="submit">Reservar</button>
+
+</form>
+
+<a href="/">
+<button class="volver">Volver</button>
+</a>
+
+</div>
+
+</body>
+</html>

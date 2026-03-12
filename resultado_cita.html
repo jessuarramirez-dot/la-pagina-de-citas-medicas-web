@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Resultado de la Cita</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Resultado</h2>
+
+{% if mensaje and mensaje is mapping %}
+<ul>
+  <li><strong>ID:</strong> {{ mensaje.id }}</li>
+  <li><strong>Documento:</strong> {{ mensaje.documento }}</li>
+  <li><strong>Médico:</strong> {{ mensaje.medico }}</li>
+  <li><strong>Tipo de cita:</strong> {{ mensaje.tipo_cita }}</li>
+  <li><strong>Fecha:</strong> {{ mensaje.fecha }}</li>
+  <li><strong>Hora:</strong> {{ mensaje.hora }}</li>
+  <li><strong>Dirección EPS:</strong> {{ mensaje.direccion_eps }}</li>
+</ul>
+<a href="/editar_cita/{{ mensaje.id }}">
+  <button><i class="fa-solid fa-pen-to-square"></i> Editar Cita</button>
+</a>
+{% else %}
+<p>{{ mensaje }}</p>
+{% endif %}
+
+<a href="/">
+<button>Volver al inicio</button>
+</a>
+
+</div>
+
+</body>
+</html>
